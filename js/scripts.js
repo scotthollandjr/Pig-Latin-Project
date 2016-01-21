@@ -1,15 +1,16 @@
 var pigged;
-var string;
+var original;
 
-function vowel1(string) {
-  if (string.charAt(0) === ( "a" || "e" || "i" || "o" || "u" )) {
-    pigged = string.concat( "ay" );
+function vowel1(original) {
+  if (original.charAt(0) === ( "a" || "e" || "i" || "o" || "u" )) {
+    pigged = original.concat( "ay" );
     return pigged;
-  } else {
-    consonFirst(string);
   }
 }
 
-function consonant1(string) {
-
+function consonant2(original) {
+  if (original.charAt(0, 1) !== ( "a" || "e" || "i" || "o" || "u" )) {
+    pigged = original.substr(2) + original.charAt(0) + original.charAt(1) + "ay";
+    return pigged;
+  }
 }
