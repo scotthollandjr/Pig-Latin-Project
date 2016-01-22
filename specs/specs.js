@@ -5,8 +5,14 @@ describe('vowel1', function() {
 });
 
 describe('consonant2', function() {
-  it("words beginning with double consonant, move first letter to end append ay", function() {
+  it("words beginning with double consonant, move first two letters to end append ay", function() {
     expect(consonant2("breakfast")).to.equal("eakfastbray")
+  });
+});
+
+describe('consonant1', function() {
+  it("words beginning with a single consonant, move first letter to end append ay", function() {
+    expect(consonant1("boppa")).to.equal("oppabay")
   });
 });
 
