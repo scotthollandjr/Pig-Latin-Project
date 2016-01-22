@@ -19,6 +19,8 @@ function consonant1(original) {
   } else if (original.charAt(0) === "q" ){
     pigged = original.substr(2) + original.charAt(0) + original.charAt(1) + "ay";
     return pigged;
+  } else if (original.charAt(1) === "q" ){
+    pigged = original.substr(3) + original.charAt(0) + original.charAt(1) + original.charAt(2) + "ay"
   } else {
     consonant2(original);
   }
@@ -26,6 +28,7 @@ function consonant1(original) {
 
 function consonant2(original) {
     pigged = original.substr(2) + original.charAt(0) + original.charAt(1) + "ay";
+    alert("run consonant2");
     return pigged;
 }
 
