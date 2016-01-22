@@ -14,6 +14,10 @@ describe('consonant1', function() {
   it("words beginning with a single consonant, move first letter to end append ay", function() {
     expect(consonant1("boppa")).to.equal("oppabay")
   });
+
+  it("words beginning with a q, move first two letters to end and append ay", function() {
+    expect(consonant1("quest")).to.equal("estquay")
+  });
 });
 
 // words beginning with vowel, append ay

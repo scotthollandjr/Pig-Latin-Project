@@ -19,5 +19,8 @@ function consonant1(original) {
   if (original.charAt(0) != ( "q" )) {
     pigged = original.substr(1) + original.charAt(0) + "ay";
     return pigged;
+  } else {
+    pigged = original.substr(2) + original.charAt(0) + original.charAt(1) + "ay";
+    return pigged;
   }
 }
