@@ -4,8 +4,7 @@ var original;
 var pigArray = [];
 
 function vowel1(original) {
-  var firstChar = original.charAt(0);
-  if ((firstChar === "a" ) || (firstChar === "e" ) || (firstChar === "i" ) || (firstChar === "o" ) || (firstChar === "u" )) {
+  if (original.charAt(0).match(/[aeiouAEIOU]/gi)) {
     pigged = original.concat( "ay" );
     pigArray.push(pigged + " ");
 
@@ -15,8 +14,7 @@ function vowel1(original) {
 };
 
 function consonant1(original) {
-  var secondChar = original.charAt(1);
-  if (((secondChar === "a" ) || (secondChar === "e" ) || (secondChar === "i" ) || (secondChar === "o" ) || (secondChar === "u" )) && (original.charAt(0) != "q" )){
+  if ((original.charAt(1).match(/[aeiouAEIOU]/gi)) && (original.charAt(0) != "q" )){
     pigged = original.substr(1) + original.charAt(0) + "ay";
     pigArray.push(pigged + " ");
   } else if (original.charAt(0) === "q" ){
