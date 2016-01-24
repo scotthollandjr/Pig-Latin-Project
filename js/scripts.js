@@ -14,10 +14,10 @@ function vowel1(original) {
 };
 
 function consonant1(original) {
-  if ((original.charAt(1).match(/[aeiouAEIOU]/gi)) && (original.charAt(0) != "q" )){
+  if ((original.charAt(1).match(/[aeiouAEIOU]/gi)) && (original.charAt(0).match(/[^qQ]/))){
     pigged = original.substr(1) + original.charAt(0) + "ay";
     pigArray.push(pigged + " ");
-  } else if (original.charAt(0) === "q" ){
+  } else if (original.charAt(0).match(/[qQ]/)){
     pigged = original.substr(2) + original.charAt(0) + original.charAt(1) + "ay";
     pigArray.push(pigged + " ");
   } else if (original.charAt(1) === "q" ){
